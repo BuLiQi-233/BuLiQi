@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>检查宿舍小助手 (BuLiQi)</title>
+</head>
+<body>
+    <div class="container" id="main-container">
+        <h1>欢迎使用检查宿舍小助手 (BuLiQi)</h1>
+        <div class="selector">
+            <label for="building-select">请选择宿舍楼号：</label>
+            <select id="building-select">
+                <option value="" disabled selected>选择宿舍楼</option>
+            </select>
+            <button id="complete-button">完成</button>
+        </div>
+    </div>
+    <div class="container" id="selection-container" style="display: none;">
+        <h2>选择宿舍信息</h2>
+        <div class="selector">
+            <label for="floor-select">请选择楼层：</label>
+            <select id="floor-select">
+                <option value="" disabled selected>选择楼层</option>
+            </select>
+            <label for="room-select">请选择宿舍号：</label>
+            <select id="room-select">
+                <option value="" disabled selected>选择宿舍号</option>
+            </select>
+            <label for="project-select">请选择宿舍项目：</label>
+            <select id="project-select">
+                <option value="" disabled selected>选择项目</option>
+                <option value="优秀宿舍">优秀宿舍</option>
+                <option value="优秀个人">优秀个人</option>
+                <option value="不合格宿舍">不合格宿舍</option>
+                <option value="不合格个人">不合格个人</option>
+                <option value="警告个人">警告个人</option>
+            </select>
+            <div id="bed-select-container" style="display: none;">
+                <label for="bed-select">请选择床号：</label>
+                <select id="bed-select">
+                    <option value="" disabled selected>选择床号</option>
+                    <option value="1">1号</option>
+                    <option value="2">2号</option>
+                    <option value="3">3号</option>
+                    <option value="4">4号</option>
+                </select>
+            </div>
+            <textarea id="reason-input" placeholder="请输入评判理由"></textarea>
+            <button id="save-button">写入</button>
+            <button id="undo-button">撤回上一次写入</button>
+            <button id="reset-button">重置数据</button>
+            <button id="export-button">导出数据</button>
+            <button id="back-button">返回上一页</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
